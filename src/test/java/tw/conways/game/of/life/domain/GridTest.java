@@ -17,7 +17,7 @@ public class GridTest {
                 {deadCell, deadCell, deadCell},
                 {deadCell, deadCell, deadCell},};
         Grid grid = new Grid(initGrid);
-        Cell[][] newGrid = grid.refresh();
-        assertThat(newGrid, is(nextGrid));
+        Grid newGrid = grid.refresh();
+        assertThat(newGrid.getCurrentGrid(), is(nextGrid));
     }
 }

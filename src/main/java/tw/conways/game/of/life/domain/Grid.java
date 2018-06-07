@@ -15,7 +15,7 @@ public class Grid {
         this.currentGrid = currentGrid;
     }
 
-    public Cell[][] refresh() {
-        return this.currentGrid;
+    public Grid refresh() {
+        return this;
     }
 }
