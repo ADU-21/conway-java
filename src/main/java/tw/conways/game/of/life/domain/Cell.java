@@ -18,11 +18,11 @@ public class Cell {
         return isActive() ? "o" : ".";
     }
 
-    void inactive() {
+    void die() {
         setActive(false);
     }
 
-    void active() {
+    void live() {
         setActive(true);
     }
 }

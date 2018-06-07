@@ -9,14 +9,14 @@ public class CellTest {
     @Test
     public void ShouldShowPointWhenInactive() {
         Cell cell = new Cell();
-        cell.inactive();
+        cell.die();
         assertEquals(".", cell.show());
     }
 
     @Test
     public void ShouldShowOWhenActive() {
         Cell cell = new Cell();
-        cell.active();
+        cell.live();
         assertEquals("o", cell.show());
     }
 }
