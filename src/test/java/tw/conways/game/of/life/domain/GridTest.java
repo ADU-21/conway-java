@@ -9,14 +9,15 @@ public class GridTest {
 
     @Test
     public void ShouldShowEmptyGridWhenInputGridIsEmpty() {
-        String[][] initGrid = {{".", ".", "."},
-                {".", ".", "."},
-                {".", ".", "."},};
-        String[][] nextGrid = {{".", ".", "."},
-                {".", ".", "."},
-                {".", ".", "."},};
+        Cell deadCell = new Cell(false);
+        Cell[][] initGrid = {{deadCell, deadCell, deadCell},
+                {deadCell, deadCell, deadCell},
+                {deadCell, deadCell, deadCell},};
+        Cell[][] nextGrid = {{deadCell, deadCell, deadCell},
+                {deadCell, deadCell, deadCell},
+                {deadCell, deadCell, deadCell},};
         Grid grid = new Grid(initGrid);
-        String[][] newGrid = grid.refresh();
+        Cell[][] newGrid = grid.refresh();
         assertThat(newGrid, is(nextGrid));
     }
 }

@@ -10,13 +10,13 @@ public class CellTest {
     public void ShouldShowPointWhenInactive() {
         Cell cell = new Cell();
         cell.die();
-        assertEquals(".", cell.show());
+        assertEquals('.', cell.show());
     }
 
     @Test
     public void ShouldShowOWhenActive() {
         Cell cell = new Cell();
         cell.live();
-        assertEquals("o", cell.show());
+        assertEquals('o', cell.show());
     }
 }

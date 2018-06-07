@@ -3,26 +3,34 @@ package tw.conways.game.of.life.domain;
 public class Cell {
     private boolean active;
 
-    Cell() {
+    public Cell() {
     }
 
-    private boolean isActive() {
-        return active;
-    }
-
-    private void setActive(boolean active) {
+    public Cell(boolean active) {
         this.active = active;
     }
 
-    String show() {
-        return isActive() ? "o" : ".";
+    public Cell(char cell) {
+        this.active = cell == 'o';
     }
 
-    void die() {
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public char show() {
+        return isActive() ? 'o' : '.';
+    }
+
+    public void die() {
         setActive(false);
     }
 
-    void live() {
+    public void live() {
         setActive(true);
     }
 }

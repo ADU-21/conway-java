@@ -1,13 +1,21 @@
 package tw.conways.game.of.life.domain;
 
 public class Grid {
-    private String[][] currentGrid;
+    private Cell[][] currentGrid;
 
-    public Grid(String[][] currentGrid) {
+    public Cell[][] getCurrentGrid() {
+        return currentGrid;
+    }
+
+    public void setCurrentGrid(Cell[][] currentGrid) {
         this.currentGrid = currentGrid;
     }
 
-    public String[][] refresh() {
+    public Grid(Cell[][] currentGrid) {
+        this.currentGrid = currentGrid;
+    }
+
+    public Cell[][] refresh() {
         return this.currentGrid;
     }
 }
