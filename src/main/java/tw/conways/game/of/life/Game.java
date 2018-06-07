@@ -17,8 +17,9 @@ public class Game {
         while (refreshTimes < MAX_REFRESH_TIMES) {
             try {
                 refreshTimes ++;
-                grid.refresh();
+                grid.refresh().print();
                 sleep(INTERVAL_TIME);
+                System.out.flush();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
